@@ -1,10 +1,6 @@
 (function() {
 
-  //////////////////////
-  // Utils
-  //////////////////////
   function throttle(fn, delay, scope) {
-    // Default delay
     delay = delay || 250;
     var last, defer;
     return function() {
@@ -33,14 +29,6 @@
     return destination;
   }
 
-  //////////////////////
-  // END Utils
-  //////////////////////
-
-  //////////////////////
-  // Scroll Module
-  //////////////////////
-
   var ScrollManager = (function() {
 
     var defaults = {
@@ -67,7 +55,7 @@
           relativeLink[0].classList.add(self.currentStepClass);
         },
 
-        // Provide a default scroll animation
+        // Provides a default scroll animation
         smoothScrollAnimation: function(target) {
           $('html, body').animate({
             scrollTop: target
@@ -95,7 +83,6 @@
           return false;
         }
 
-        // Allow to customize the animation engine ( jQuery / GSAP / velocity / ... )
         _animation = function(target) {
           target = typeof target === 'number' ? target : $(target).offset().top;
           return options.smoothScrollAnimation(target);
@@ -111,7 +98,7 @@
           });
         }
 
-        // Throttle for performances gain
+        // Throttle 
         throttledGetScrollPosition = throttle(this.getScrollPosition).bind(this);
         window.addEventListener('scroll', throttledGetScrollPosition);
         window.addEventListener('resize', throttledGetScrollPosition);
@@ -175,13 +162,6 @@
       }
     }
   })();
-  //////////////////////
-  // END scroll Module
-  //////////////////////
-
-  //////////////////////
-  // APP init
-  //////////////////////
 
   var scrollToTopBtn = document.querySelector('.Scroll-to-top'),
     steps = document.querySelectorAll('.js-scroll-step'),
@@ -208,24 +188,10 @@
       }
     },
 
-    // Behavior when a step changes
-    // default : highlight links
-
-    // onStepChange: function (step) {},
-
-    // Customize the animation with jQuery, GSAP or velocity
-    // default : jQuery animate()
-    // Eg with GSAP scrollTo plugin
-
-    //smoothScrollAnimation: function (target) {
-    //		TweenLite.to(window, 2, {scrollTo:{y:target}, ease:Power2.easeOut});
-    //}
 
   });
 
-  //////////////////////
-  // END APP init
-  //////////////////////
+
 
 })();
 
@@ -257,9 +223,6 @@ function autoType(elementClass, typingSpeed){
 }
 
 $(document).ready(function(){
-  // Now to start autoTyping just call the autoType function with the
-  // class of outer div
-  // The second paramter is the speed between each letter is typed.
   autoType(".type-js",200);
 
 
