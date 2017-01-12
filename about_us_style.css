@@ -13,6 +13,8 @@ li {
 	display: inline;
     border: 2px solid #000;
     border-radius: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 li a {
@@ -28,6 +30,7 @@ li a {
 	font-weight: bold;
 	font-family: 'Bungee Shade', cursive;
 	text-align: center;
+	justify-content: center;
 }
 
 #heading {
@@ -36,7 +39,9 @@ li a {
 	color: #000;
 	font-size: 80px;
 	font-weight: 100;
-	margin-top: 0em;
-    margin-bottom: 0em;
+	margin: 0px 450px;
+	border: 2px solid;
+    border-radius: 5px;
 }
+
 
