@@ -1,0 +1,33 @@
+body {
+	background-image: url("blue-background 4.jpg");
+}
+
+#menu li {
+    display:inline;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 20px;
+}
+
+a {
+	color: inherit;
+}
+
+.buttons {
+	font-size: 15px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#heading {
+	text-align: center; 
+   top: 225px; 
+   left: 410px; 
+   font-family: 'Raleway', sans-serif;
+   color: #ffffff;
+   font-size: 20px;
+   font-weight: 100;
+}
